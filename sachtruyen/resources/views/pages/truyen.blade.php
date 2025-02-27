@@ -13,15 +13,16 @@
     <div class="col-md-9">
         <div class="row">
             <div class="col-md-3">
-                <img class="card-img-top" src="{{asset('public/uploads/truyen/db1.jpg')}}" >
+                <img class="card-img-top" src="{{asset('public/uploads/truyen/'.$truyen->hinhanh)}}" >
             </div>
             <div class="col-md-9">
                 <style type="text/css">
                     .infotruyen{list-style-type: none;}
                 </style>
                 <ul class="infotruyen">
-                    <li>Tác giả: Yokoshima</li>
-                    <li>Thể loại : Trinh thám, cổ tích</li>
+                    <li>Tên truyện: {{ $truyen->tentruyen }}</li>
+                    <li>Tác giả: {{ $truyen->tacgia }}</li>
+                    <li>Danh mục truyện: <a href="{{url('danh-muc/'.$truyen->danhmuctruyen->slug_danhmuc)}}">{{ $truyen->danhmuctruyen->tendanhmuc }}</a></li>
                     <li>Số chapter: 200</li>
                     <li>Số lượt xem: 2000</li>
                     <li><a href="#">Xem mục lục</a></li>
@@ -30,67 +31,43 @@
             </div>
         </div>
         <div class="col-md-12">
-            <p>Truyện tranh là một loại hình truyền thông hình ảnh kết hợp với văn bản, thường được in trên giấy và xuất bản dưới dạng sách. Truyện tranh thường kể câu chuyện bằng cách sử dụng hình ảnh và văn bản, thường kể theo thứ tự từ trái sang phải, từ trên xuống dưới, và từ trang này sang trang khác. Truyện tranh thường được xuất bản dưới dạng sách, tuy nhiên cũng có truyện tranh được xuất bản trên các tạp chí, báo, trên internet, hoặc trên các phương tiện truyền thông khác. Truyện tranh thường được vẽ bằng tay, tuy nhiên cũng có truyện tranh được vẽ bằng máy tính.</p>
+            <p>{ !!$truyen->tomtat!! }</p>
         </div>
         <hr>
         <h4>Mục lục</h4>
         <ul class="mucluctruyen">
-            <li><a href="#">Chương 1: Cô gái và chú chó</a></li>
-            <li><a href="#">Chương 1: Cô gái và chú chó</a></li>
-            <li><a href="#">Chương 1: Cô gái và chú chó</a></li>
-            <li><a href="#">Chương 1: Cô gái và chú chó</a></li>
-            <li><a href="#">Chương 1: Cô gái và chú chó</a></li>
-            <li><a href="#">Chương 1: Cô gái và chú chó</a></li>
-            <li><a href="#">Chương 1: Cô gái và chú chó</a></li>
-            <li><a href="#">Chương 1: Cô gái và chú chó</a></li>
-            <li><a href="#">Chương 1: Cô gái và chú chó</a></li>
+            @php
+            $mucluc = count($chapter);
+            @endphp
+            @if($mucluc > 0)
+                @foreach ($chapter as $key => $chap)
+                <li><a href="{{ url('xem-chapter/'.$chap->slug_chapter) }}">{{ $chap->tieude }}</a></li>            
+                @endforeach
+            @else
+                <li>Truyện đang cập nhật...</li>
+            @endif
         </ul>
         <h4>Sách cùng danh mục</h4>
         <div class="row">
-            <div class="col-md-3">
-              <div class="card mb-3 box-shadow">
-                <a href="">
-                <img class="card-img-top" src="{{ asset('public/uploads/truyen/db1.jpg') }}" alt="Card image cap">
-                <div class="card-body">
-                    <h5>This is a wider card with supporting</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        @foreach ($cungdanhmuc as $key => $value)
+        <div class="col-md-3">
+            <div class="card mb-3 box-shadow">
+            <img class="card-img-top" src="{{ asset('public/uploads/truyen/'.$value->hinhanh) }}" alt="Card image cap">
+            <div class="card-body">
+                <h5>{{$value->tentruyen}}</h5>
+                <p class="card-text">{{$value->tomtat}}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="{{ url('xem-truyen/'.$value->slug_truyen) }}" class="btn btn-sm btn-outline-secondary">Đọc ngay</a>
+                    <a class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i>568955</a>
                 </div>
-                </a>               
-                </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card mb-3 box-shadow">
-                <a href="">
-                <img class="card-img-top" src="{{ asset('public/uploads/truyen/db1.jpg') }}" alt="Card image cap">
-                <div class="card-body">
-                    <h5>This is a wider card with supporting</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                </a>               
+                <small class="text-muted">9 mins ago</small>
                 </div>
             </div>
-            <div class="col-md-3">
-              <div class="card mb-3 box-shadow">
-                <a href="">
-                <img class="card-img-top" src="{{ asset('public/uploads/truyen/db1.jpg') }}" alt="Card image cap">
-                <div class="card-body">
-                    <h5>This is a wider card with supporting</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                </a>               
-                </div>
             </div>
-            <div class="col-md-3">
-              <div class="card mb-3 box-shadow">
-                <a href="">
-                <img class="card-img-top" src="{{ asset('public/uploads/truyen/db1.jpg') }}" alt="Card image cap">
-                <div class="card-body">
-                    <h5>This is a wider card with supporting</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                </a>               
-                </div>
-            </div>
+        </div>
+      
+      @endforeach
         </div>
     </div>
     <div class="col-md-3">

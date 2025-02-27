@@ -6,7 +6,6 @@ use App\Http\Controllers\DanhMucController;
 use App\Http\Controllers\TruyenController;
 use App\Http\Controllers\ChapterController;
 use App\Http\Controllers\IndexController;
-use Faker\Guesser\Name;
 
 /*
 |--------------------------------------------------------------------------
