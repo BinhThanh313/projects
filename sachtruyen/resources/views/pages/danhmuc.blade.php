@@ -30,7 +30,6 @@
                   <a href="{{ url('xem-truyen/'.$value->slug_truyen) }}" class="btn btn-sm btn-outline-secondary">Đọc ngay</a>
                   <a class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i>568955</a>
                 </div>
-                <small class="text-muted">9 mins ago</small>
               </div>
             </div>
           </div>

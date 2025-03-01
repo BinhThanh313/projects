@@ -68,7 +68,6 @@
                 </p>
                 <p>Sách tổng hợp và sửa lỗi chính tả các tác phẩm sách, truyện hiện có trên mạng internet.
                     Nếu bạn có bản quyền thương mại với tác phẩm vui lòng liên hệ qua email: info.docsach247@gmail.com</p>
-                <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
             </div>
         </footer>
         <script src="{{ asset('js/app.js') }}" defer></script>
@@ -93,6 +92,24 @@
                     }
                 }
             })
+            </script>
+            <script type="text/javascript">
+                $('.select-chapter').on('change',function(){
+                    var url = $(this).val();
+                    if(url){
+                        window.location = url;
+                    }
+                    else{
+                        return false;
+                    }
+                });
+
+                current_chapter();
+
+                function current_chapter(){
+                    var url = window.location.href;
+                    $('.select-chapter').find('option[value="'+url+'"]').attr('selected',true);
+                }
             </script>
     </body>
 </html>

@@ -26,12 +26,16 @@
                     <li>Số chapter: 200</li>
                     <li>Số lượt xem: 2000</li>
                     <li><a href="#">Xem mục lục</a></li>
-                    <li><a href="#" class="btn btn-primary">Đọc Online</a></li>
+                    @if ($chapter_dau)
+                    <li><a href="{{ url('xem-chapter/'.$chapter_dau->slug_chapter) }}" class="btn btn-primary">Đọc Online</a></li>  
+                    @else
+                    <li><a href="#" class="btn btn-danger">Truyện đang cập nhật</a></li>                  
+                    @endif
                 </ul>
             </div>
         </div>
         <div class="col-md-12">
-            <p>{ !!$truyen->tomtat!! }</p>
+            <p>{ !! $chapter->tomtat !! }</p>
         </div>
         <hr>
         <h4>Mục lục</h4>

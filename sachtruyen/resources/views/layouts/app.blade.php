@@ -80,6 +80,10 @@
             @yield('content')
         </main>
     </div>
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+    <script type="text/javascript">
+        CKEDITOR.replace('noidung_chapter');
+   </script>
     <!-- Bootstrap JS Bundle (bao gồm Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
    <script type="text/javascript">
@@ -117,5 +121,7 @@
 }
 
    </script>
+   
+   
 </body>
 </html>

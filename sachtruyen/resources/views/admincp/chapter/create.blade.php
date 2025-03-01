@@ -41,7 +41,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nội dung chapter</label>
-                            <textarea name="noidung" class="form-control" rows="5" style="resize: none"></textarea>
+                            <textarea name="noidung" id="noidung_chapter" class="form-control" rows="5" style="resize: none"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Thuộc truyện</label>
