@@ -19,7 +19,7 @@ class Truyen extends Model
     protected $table = 'truyen';
 
     public function danhmuctruyen(){
-        return $this->belongsTo('App\Models\DanhMucTruyen', 'danhmuc_id');
+        return $this->belongsTo('App\Models\DanhMucTruyen', 'danhmuc_id', 'id');
     }
 
     public function chapter(){

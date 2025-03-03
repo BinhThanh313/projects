@@ -39,18 +39,11 @@
                                     
                                 </div>
                             </li>
-                            <li class="nav-item dropdown position-relative">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Thể loại
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                </div>
-                            </li>
+                        
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        <form class="form-inline my-2 my-lg-0" action="{{ url('tim-kiem') }}" method="GET">
+                            <input class="form-control me-2" type="search" name="tukhoa" placeholder="Tìm kiếm tác giả, truyện,..." aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Tìm Kiếm</button>
                         </form>
                     </div>
                 </div>

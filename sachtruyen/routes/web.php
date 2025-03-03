@@ -22,6 +22,7 @@ Route::get('/', [IndexController::class, 'home']);
 Route::get('/danh-muc/{slug}', [IndexController::class, 'danhmuc']);
 Route::get('/xem-truyen/{slug}', [IndexController::class, 'xemtruyen']) ->name('xem-truyen');
 Route::get('/xem-chapter/{slug}', [IndexController::class, 'xemchapter']) ->name('xem-chapter');
+Route::get('/tim-kiem', [IndexController::class, 'timkiem']) ->name('tim-kiem');
 
 Auth::routes();
 

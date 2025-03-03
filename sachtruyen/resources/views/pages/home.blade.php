@@ -4,7 +4,7 @@
 @endsection 
 @section('content')
 
-<h3>NEW UPDATES</h3>
+<h3>TRUYỆN MỚI CẬP NHẬT</h3>
 <div class="album py-5 bg-light">
   <div class="container">
     <div class="row">
