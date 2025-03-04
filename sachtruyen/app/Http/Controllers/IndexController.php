@@ -15,7 +15,12 @@ class IndexController extends Controller
         $truyen = Truyen::orderBy('id', 'DESC')->where('kichhoat', 0)->get();
         // Lấy top 6 truyện có lượt xem cao nhất
         $top_truyen = Truyen::orderBy('id', 'DESC')->where('kichhoat', 0)->limit(6)->get();
-        return view('pages.home')->with(compact('danhmuc', 'truyen', 'top_truyen'));
+        $top_chapter_truyen = Truyen::withCount('chapters') // Đếm số chapter
+            ->where('kichhoat', 0)
+            ->orderBy('chapters_count', 'DESC') // Sắp xếp giảm dần theo số chapter
+            ->limit(6) // Giới hạn 5 truyện
+            ->get();
+        return view('pages.home')->with(compact('danhmuc', 'truyen', 'top_truyen', 'top_chapter_truyen'));
     }
     public function danhmuc($slug) {
         $danhmuc = DanhmucTruyen::orderBy('id', 'DESC')->get();

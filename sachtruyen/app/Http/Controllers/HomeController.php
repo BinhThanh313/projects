@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Truyen;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $truyen = Truyen::with('danhmuctruyen')->withCount('chapters')->get();
+        return view('home', compact('truyen'));
     }
 }

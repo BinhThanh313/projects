@@ -23,8 +23,7 @@
                     <li>Tên truyện: {{ $truyen->tentruyen }}</li>
                     <li>Tác giả: {{ $truyen->tacgia }}</li>
                     <li>Danh mục truyện: <a href="{{url('danh-muc/'.$truyen->danhmuctruyen->slug_danhmuc)}}">{{ $truyen->danhmuctruyen->tendanhmuc }}</a></li>
-                    <li>Số chapter: 200</li>
-                    <li>Số lượt xem: 2000</li>
+                    <li>Số chapter: {{ count($chapter) }}</li>
                     <li><a href="#">Xem mục lục</a></li>
                     @if ($chapter_dau)
                     <li><a href="{{ url('xem-chapter/'.$chapter_dau->slug_chapter) }}" class="btn btn-primary">Đọc Online</a></li>  
@@ -35,7 +34,7 @@
             </div>
         </div>
         <div class="col-md-12">
-            <p>{ !! $chapter->tomtat !! }</p>
+            <p>{{ $truyen->tomtat}}</p>
         </div>
         <hr>
         <h4>Mục lục</h4>
@@ -74,9 +73,7 @@
       @endforeach
         </div>
     </div>
-    <div class="col-md-3">
-        <h3>Sách hay xem nhiều</h3>
-    </div>
+  
 </div>
           
 @endsection

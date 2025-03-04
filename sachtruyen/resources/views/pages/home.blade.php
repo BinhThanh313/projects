@@ -18,7 +18,6 @@
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
                 <a href="{{ url('xem-truyen/'.$value->slug_truyen) }}" class="btn btn-sm btn-outline-secondary">Đọc ngay</a>
-                <a class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i>568955</a>
               </div>
             </div>
           </div>
