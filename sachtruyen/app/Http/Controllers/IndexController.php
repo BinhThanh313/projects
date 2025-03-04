@@ -32,10 +32,11 @@ class IndexController extends Controller
     public function xemtruyen($slug) {
         $danhmuc = DanhmucTruyen::orderBy('id', 'DESC')->get();
         $truyen = Truyen::with('danhmuctruyen')->where('slug_truyen', $slug)->where('kichhoat', 0)->first();
-        $chapter = Chapter::with('truyen')->orderBy('id', 'ASC')->where('truyen_id', $truyen->id)->get();
+        $truyen_breadcrumb = Truyen::where('id', $truyen->truyen_id)->first();
+        $chapter = Chapter::with('truyen')->orderBy('id', 'DESC')->where('truyen_id', $truyen->id)->get();
         $chapter_dau = Chapter::with('truyen')->orderBy('id', 'ASC')->where('truyen_id', $truyen->id)->first();
         $cungdanhmuc = Truyen::with('danhmuctruyen')->where('danhmuc_id', $truyen-> danhmuctruyen->id)->whereNotIn('id',[$truyen->id])->get();
-        return view('pages.truyen')->with(compact('danhmuc', 'truyen', 'chapter', 'cungdanhmuc', 'chapter_dau'));
+        return view('pages.truyen')->with(compact('danhmuc', 'truyen', 'chapter', 'cungdanhmuc', 'chapter_dau', 'truyen_breadcrumb'));
     }
     public function xemchapter($slug) {
         $danhmuc = DanhmucTruyen::orderBy('id', 'DESC')->get();

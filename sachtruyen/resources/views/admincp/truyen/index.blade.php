@@ -5,7 +5,7 @@
 @include('layouts.nav')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-8" style="    width: 100%;">
             <div class="card">
                 <div class="card-header">Liệt kê  truyện</div>
 
@@ -34,7 +34,7 @@
                     <tr>
                         <th scope="row">{{ $key }}</th>
                         <td>{{ $truyen->tentruyen }}</td>
-                        <td><img src="{{ asset('public/uploads/truyen/'.$truyen->hinhanh) }}" height="250" width="180"></td>
+                        <td><img src="{{ asset('public/uploads/truyen/'.$truyen->hinhanh) }}" height="200" width="150"></td>
                         <td>{{ $truyen->slug_truyen }}</td>
                         <td>{{ $truyen->tomtat }}</td>
                         <td>{{ $truyen->danhmuctruyen->tendanhmuc }}</td>

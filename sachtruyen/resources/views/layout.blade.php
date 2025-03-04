@@ -19,19 +19,17 @@
             <!-- MENU -->
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Webtruyen.com</a>
+                <i class="navbar-brand" href="{{ url('/') }}" style="font-size: 1.5rem; font-weight: 700; color: #dc3545; text-decoration: none; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">WEBTRUYEN.COM</i>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Trang chủ<span class="sr-only">(current)</span></a>
+                            <a class="nav-link active" aria-current="page" href="{{ url('/') }}" style="font-family: 'Nunito', sans-serif; font-size: 1.1rem; font-weight: 600; color: #000000; text-decoration: none; padding: 10px 15px;">Trang chủ<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item dropdown position-relative">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Danh mục truyện
-                                </a>
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-family: 'Nunito', sans-serif; font-size: 1.1rem; font-weight: 600; color: #000000; text-decoration: none; padding: 10px 15px;">Danh mục truyện</a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     @foreach ($danhmuc as $key => $danh)
                                     <a class="dropdown-item" href="{{ url('danh-muc/'.$danh->slug_danhmuc) }}">{{ $danh -> tendanhmuc }}</a>
@@ -57,7 +55,7 @@
         <footer class="text-muted">
             <div class="container">
                 <p class="float-right">
-                <a class="float-end" href="#">Back to top</a>
+                <a class="float-end" href="#" style="font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 600; color: #333; text-decoration: none;">Back to top</a>
                 </p>
                 <p>Sách tổng hợp và sửa lỗi chính tả các tác phẩm sách, truyện hiện có trên mạng internet.
                     Nếu bạn có bản quyền thương mại với tác phẩm vui lòng liên hệ qua email: info.docsach247@gmail.com</p>

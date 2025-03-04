@@ -1,13 +1,18 @@
 @extends('../layout')
 
 @section('content')
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ url('danh-muc/'.$truyen_breadcrumb->danhmuctruyen->slug_danhmuc) }}">{{ $truyen_breadcrumb->danhmuctruyen->tendanhmuc }}</a></li>
-        <li class="breadcrumb-item active" aria-current="page">{{ $truyen_breadcrumb->tentruyen }}</li>
+<nav aria-label="breadcrumb" style="margin-top: 20px; margin-bottom: 20px;">
+    <ol class="breadcrumb" style="background-color: #f8f9fa; padding: 10px 15px; border-radius: 5px; margin: 0;">
+        <li class="breadcrumb-item" style="font-family: 'Nunito', sans-serif; font-size: 1rem;">
+            <a href="{{ url('/') }}" style="color: #007bff; text-decoration: none;">Home</a>
+        </li>
+        <li class="breadcrumb-item" style="font-family: 'Nunito', sans-serif; font-size: 1rem;">
+            <a href="{{ url('danh-muc/'.$truyen_breadcrumb->danhmuctruyen->slug_danhmuc) }}" style="color: #007bff; text-decoration: none;">{{ $truyen_breadcrumb->danhmuctruyen->tendanhmuc }}</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page" style="font-family: 'Nunito', sans-serif; font-size: 1rem; color: #555;">{{ $truyen_breadcrumb->tentruyen }}</li>
     </ol>
 </nav>
+
 <div class="row">
     <div class="col-md-12">
         <h4>{{ $chapter->truyen->tentruyen }}</h4>
@@ -44,9 +49,9 @@
             <a class="btn btn-primary {{ $chapter->id == $max_id->id ? 'isDisabled' : '' }}" href="{{ url('xem-chapter/'.$next_chapter) }}">Chap sau</a>
         </div>
         <!-- Phần lưu và chia sẻ -->
-        <h3>Lưu và chia sẻ truyện:</h3>
+        <!-- <h3>Lưu và chia sẻ truyện:</h3>
         <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a> -->
     </div>
 </div>
 

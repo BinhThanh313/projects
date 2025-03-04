@@ -2,10 +2,12 @@
 
 @section('content')
 
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{ url('/') }}">Trang chủ</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Tìm kiếm</li>
+<nav aria-label="breadcrumb" style="margin-top: 20px; margin-bottom: 20px;">
+    <ol class="breadcrumb" style="background-color: #f8f9fa; padding: 10px 15px; border-radius: 5px; margin: 0;">
+        <li class="breadcrumb-item" style="font-family: 'Nunito', sans-serif; font-size: 1rem;">
+            <a href="{{ url('/') }}" style="color: #007bff; text-decoration: none;">Trang chủ</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page" style="font-family: 'Nunito', sans-serif; font-size: 1rem; color: #555;">Tìm kiếm</li>
     </ol>
 </nav>
 <h3>Từ khóa của bạn là: {{$tukhoa}}</h3>
@@ -35,7 +37,6 @@
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="{{ url('xem-truyen/'.$value->slug_truyen) }}" class="btn btn-sm btn-outline-secondary">Đọc ngay</a>
-                  <a class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i>568955</a>
                 </div>
               </div>
             </div>

@@ -24,9 +24,9 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/home') }}">
-                   Admin Webtruyen
-                </a>
+                <i class="navbar-brand" href="{{ url('/home') }}">
+                <p class="navbar-brand" href="#" style="font-size: 1.5rem; font-weight: 700; color: #dc3545; text-decoration: none; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">ADMIN WEBTRUYEN</p>
+                </i>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
