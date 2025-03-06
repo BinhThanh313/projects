@@ -39,3 +39,5 @@ Hệ thống sử dụng cơ sở dữ liệu quan hệ để lưu trữ thông 
 - **personal_access_tokens**: Dùng để lưu token truy cập nếu hệ thống có API hoặc đăng nhập không cần mật khẩu.  
 
 http://127.0.0.1:8000
+repo: https://github.com/BinhThanh313/projects
+Link demo: https://youtu.be/zH6SBGWuwz8
