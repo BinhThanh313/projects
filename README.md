@@ -37,7 +37,7 @@ Hệ thống sử dụng cơ sở dữ liệu quan hệ để lưu trữ thông 
 - **migrations**: Ghi lại các thay đổi trong cơ sở dữ liệu khi sử dụng hệ thống migration của Laravel.  
 - **password_resets**: Lưu token đặt lại mật khẩu khi người dùng quên mật khẩu.  
 - **personal_access_tokens**: Dùng để lưu token truy cập nếu hệ thống có API hoặc đăng nhập không cần mật khẩu.  
-
+###
 - **link web**:http://127.0.0.1:8000
 - **repo**: https://github.com/BinhThanh313/projects
 - **Link demo**: https://youtu.be/zH6SBGWuwz8
